@@ -17,11 +17,13 @@ export default {
       </header>
 
       <section class="card prose">
-        <p>Duque de Caxias instituiu o <strong>Programa Tarifa Zero</strong> pela Lei Municipal nº 3.589, de 10 de junho de 2026. O município também tem a Lei Municipal nº 3.152/2021, que prevê um aplicativo gratuito (Android e iOS) para os usuários do transporte público, com localização dos ônibus por GPS, itinerários, tempo estimado de espera e horários.</p>
-        <p>Este protótipo apresenta uma possível solução tecnológica para esse aplicativo: uma proposta de plataforma digital que demonstra como cidadãos de Duque de Caxias poderiam consultar linhas, pontos, horários e acompanhar o deslocamento dos ônibus.</p>
-        <p>A proposta contempla, entre outras funcionalidades:</p>
-        ${raw(list(['Consulta das linhas disponíveis', 'Origem e destino', 'Itinerários', 'Pontos de parada', 'Horários programados', 'Identificação das linhas em operação', 'Visualização dos veículos no mapa', 'Previsão de chegada a determinado ponto', 'Acompanhamento do deslocamento do ônibus', 'Informações sobre a próxima parada']))}
-        <p><strong>Este protótipo não é oficial.</strong> Não foi contratado, desenvolvido, homologado ou aprovado pela Prefeitura Municipal de Duque de Caxias, e não possui vínculo institucional com ela. Por isso, o logotipo oficial da Prefeitura não é usado nesta demonstração. Site oficial do município: <a href="https://duquedecaxias.rj.gov.br/" target="_blank" rel="noopener">duquedecaxias.rj.gov.br</a>.</p>
+        <p>Este protótipo apresenta uma proposta de plataforma digital para consulta e acompanhamento do transporte Tarifa Zero em Duque de Caxias.</p>
+        <p>A ideia é demonstrar, de forma prática, como uma aplicação poderia reunir em um único ambiente informações como linhas, itinerários, pontos de parada, horários e, em uma futura integração, a localização dos veículos em operação.</p>
+        <p>A proposta foi desenvolvida a partir da realidade territorial e operacional do município, utilizando referências públicas disponíveis sobre o sistema de transporte e a malha viária local. O objetivo é demonstrar a experiência de uso e a estrutura tecnológica de uma possível solução, sem pressupor qualquer integração atualmente existente com os sistemas municipais ou das operadoras.</p>
+        <p>Entre as funcionalidades demonstradas estão:</p>
+        ${raw(list(['Consulta das linhas disponíveis', 'Busca por origem e destino', 'Visualização de itinerários', 'Consulta de pontos de parada', 'Horários programados', 'Identificação das linhas em operação', 'Visualização dos veículos no mapa', 'Previsão de chegada a determinado ponto', 'Acompanhamento do deslocamento do ônibus', 'Informações sobre a próxima parada']))}
+        <p><strong>Este protótipo não é oficial.</strong> Não foi contratado, desenvolvido, homologado ou aprovado pela Prefeitura Municipal de Duque de Caxias e não possui vínculo institucional com o município.</p>
+        <p>A proposta utiliza identidade visual própria justamente para deixar clara essa condição.</p>
       </section>
 
       <section class="card prose">
@@ -111,7 +113,7 @@ export default {
 
       <section class="card prose">
         <h2 class="card-title">Data da consulta</h2>
-        <p>Protótipo montado em: <strong>17 de setembro de 2026</strong>, com base na Lei Municipal nº 3.589/2026 e na Lei Municipal nº 3.152/2021.</p>
+        <p>Protótipo montado em: <strong>18 de setembro de 2026</strong>, com base na Lei Municipal nº 3.589/2026 e na Lei Municipal nº 3.152/2021.</p>
         <p>Caso a Prefeitura de Duque de Caxias publique linhas, itinerários, pontos ou horários oficiais do Tarifa Zero após essa data, este protótipo deve ser atualizado para refletir essas informações.</p>
       </section>
 
