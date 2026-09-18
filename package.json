@@ -1,0 +1,9 @@
+{
+  "name": "tarifa-zero-duque-de-caxias-prototipo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "api": "node ../app/server/api.js"
+  },
+  "engines": { "node": ">=18" }
+}

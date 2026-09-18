@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1B3F84" />
+  <meta name="description" content="Tarifa Zero de Duque de Caxias: protótipo conceitual (não oficial) com linhas de demonstração, pontos de parada, horários e acompanhamento dos ônibus." />
+  <title>Tarifa Zero | Duque de Caxias</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E %3Crect x='3' y='13' width='5' height='9' rx='2' fill='%2314213D'/%3E%3Crect x='40' y='13' width='5' height='9' rx='2' fill='%2314213D'/%3E %3Cpath d='M7 10.5C7 6.4 10.2 4 14 4h20c3.8 0 7 2.4 7 6.5V37a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3Z' fill='%2336A9E1' stroke='%230E2656' stroke-width='2'/%3E %3Crect x='12.5' y='7' width='23' height='4' rx='1.2' fill='%2314213D'/%3E%3Crect x='16' y='8.4' width='16' height='1.2' rx='.6' fill='%23FFB300'/%3E %3Cpath d='M10.5 14.5c0-1.1.9-2 2-2h23c1.1 0 2 .9 2 2V25a1.5 1.5 0 0 1-1.5 1.5h-24A1.5 1.5 0 0 1 10.5 25Z' fill='%231E2A3D'/%3E %3Cpath d='M13 24.5 22 13h4.5l-9 11.5Z' fill='%23fff' opacity='.14'/%3E %3Crect x='21.4' y='19.6' width='5.2' height='5.2' rx='1' fill='%23F07D1A'/%3E%3Cpath d='M24 20.6v2.2h1.6M23.1 22.9a1.3 1.3 0 1 0 2.2 1' fill='none' stroke='%23fff' stroke-width='.7' stroke-linecap='round'/%3E %3Ccircle cx='24' cy='31.4' r='3.4' fill='%231B3F84' stroke='%230E2656' stroke-width='.6'/%3E%3Ccircle cx='24' cy='31.4' r='1.4' fill='%23FFD100'/%3E %3Cellipse cx='13.5' cy='31' rx='2.6' ry='1.8' fill='%23fff' stroke='%230E2656' stroke-width='.8'/%3E%3Cellipse cx='34.5' cy='31' rx='2.6' ry='1.8' fill='%23fff' stroke='%230E2656' stroke-width='.8'/%3E %3Crect x='9' y='35.2' width='30' height='3.4' rx='1.4' fill='%23C9CFDA' stroke='%230E2656' stroke-width='.8'/%3E %3Crect x='11' y='39.5' width='6' height='5' rx='1.4' fill='%2314213D'/%3E%3Crect x='31' y='39.5' width='6' height='5' rx='1.4' fill='%2314213D'/%3E %3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" />
+  <link rel="stylesheet" href="assets/vendor/maplibre/maplibre-gl.css" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="Tarifa Zero Duque de Caxias, página inicial">
+      <span class="brand__badge" aria-hidden="true"><span>Tarifa</span><span>zer<i>ø</i></span></span>
+      <span class="brand__text">
+        <span class="brand__tz">Duque de <b>Caxias</b></span>
+        <span class="brand__city">Transporte público · protótipo não oficial</span>
+      </span>
+    </a>
+    <nav class="topnav" aria-label="Navegação principal">
+      <a data-nav="home" href="#/">Início</a>
+      <a data-nav="live" href="#/ao-vivo">Ônibus agora</a>
+      <a data-nav="lines" href="#/linhas">Linhas</a>
+      <a data-nav="search" href="#/buscar">Buscar</a>
+      <a data-nav="about" href="#/sobre">Sobre</a>
+    </nav>
+    <a class="gov-link gov-link--text" href="https://duquedecaxias.rj.gov.br/" target="_blank" rel="noopener" aria-label="Site oficial da Prefeitura Municipal de Duque de Caxias (abre em nova aba). Este protótipo não é oficial.">
+      Prefeitura de Duque de Caxias
+    </a>
+  </header>
+  <div class="brand-stripe" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <main class="shell">
+    <section class="map-pane" aria-label="Mapa">
+      <div id="map" class="map"></div>
+      <button id="locate" class="map-fab" type="button" aria-label="Mostrar minha localização">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/><circle cx="12" cy="12" r="7"/></svg>
+      </button>
+    </section>
+
+    <aside id="sheet" class="sheet" data-state="full" aria-label="Informações">
+      <button class="sheet__handle" type="button" data-sheet-handle><span aria-hidden="true"></span></button>
+      <div id="view" class="sheet__content" tabindex="-1"></div>
+      <footer class="sheet__foot">Protótipo conceitual, não oficial. Linhas fictícias; localização dos ônibus simulada. <a href="#/sobre">Saiba mais</a></footer>
+    </aside>
+  </main>
+
+  <nav class="bottomnav" aria-label="Navegação principal">
+    <a data-nav="home" href="#/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9.5h13V10"/><path d="M10 19.5v-5h4v5"/></svg><span>Início</span></a>
+    <a data-nav="live" href="#/ao-vivo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 11h16M8 21v-4M16 21v-4"/></svg><span>Ônibus</span></a>
+    <a data-nav="lines" href="#/linhas"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 4v16M6 8h8a4 4 0 0 1 0 8H9"/><circle cx="6" cy="4" r="1.6"/><circle cx="6" cy="20" r="1.6"/></svg><span>Linhas</span></a>
+    <a data-nav="search" href="#/buscar"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>Buscar</span></a>
+    <a data-nav="about" href="#/sobre"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></svg><span>Sobre</span></a>
+  </nav>
+
+  <div id="live-region" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/vendor/leaflet/leaflet.js"></script>
+  <script src="assets/vendor/maplibre/maplibre-gl.js"></script>
+  <script src="assets/vendor/maplibre/leaflet-maplibre-gl.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

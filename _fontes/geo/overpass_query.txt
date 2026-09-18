@@ -1,0 +1,4 @@
+[out:json][timeout:60];
+area["name"="Duque de Caxias"]["admin_level"="8"]->.a;
+relation(area.a)["admin_level"="9"]["boundary"="administrative"];
+out geom;
