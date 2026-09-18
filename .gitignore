@@ -2,3 +2,4 @@ dados/
 publico/
 .claude/
 server/
+*.py
