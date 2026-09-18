@@ -15,7 +15,9 @@ export function createApiTransportProvider({ baseUrl, demo, speed, timeoutMs = 6
     const t = setTimeout(() => ctrl.abort(), timeoutMs);
     try {
       const res = await fetch(`${baseUrl}${path}${qs}`, { headers: { Accept: 'application/json' }, signal: ctrl.signal });
-      if (res.status === 404) return null;
+      // 404 também cai para os dados locais: pode ser uma API sem o espaço desta cidade (versão
+      // antiga no servidor). Os dados locais respondem a mesma pergunta; se o item não existir
+      // mesmo, eles devolvem null do mesmo jeito.
       if (!res.ok) throw new Error(`API ${res.status} em ${path}`);
       return await res.json();
     } finally {
