@@ -32,12 +32,12 @@ export default {
 
         <h3 class="data-split__title"><span class="kind-dot kind-dot--public" aria-hidden="true"></span>Informações baseadas em fontes públicas</h3>
         <p>Foram usados apenas dois tipos de dado público, sem inventar linhas ou números operacionais:</p>
-        ${raw(list(['Base legal do Programa Tarifa Zero (Lei Municipal nº 3.589/2026)', 'Locais reais do município — Terminal Centro, Saracuruna, Parada Angélica, Imbariê e Xerém — e o traçado real das vias entre eles (OpenStreetMap/OSRM)']))}
+        ${raw(list(['Base legal do Programa Tarifa Zero (Lei Municipal nº 3.589/2026)', 'Locais reais do município (Terminal Centro, Saracuruna, Parada Angélica, Imbariê e Xerém) e o traçado real das vias entre eles (OpenStreetMap/OSRM)']))}
 
         <h3 class="data-split__title"><span class="kind-dot kind-dot--sim" aria-hidden="true"></span>Elementos fictícios e simulados para demonstração</h3>
         <p>Tudo o que envolve uma "linha" propriamente dita é fictício, criado apenas para demonstrar o protótipo:</p>
         ${raw(list(['Números e sentidos das linhas (DC01, DC02, DC03)', 'Horários de saída', 'Posição atual dos ônibus', 'Deslocamento dos veículos', 'Velocidade e eventuais atrasos', 'Previsão de chegada', 'Quantidade de ônibus em circulação', 'Status operacional do veículo', 'Próxima parada e tempo estimado até ela'], 'check-list check-list--sim'))}
-        <p class="fine">Quando a Prefeitura e as operadoras divulgarem linhas, itinerários, pontos e horários reais, esses dados fictícios devem ser substituídos pelos oficiais — a estrutura do protótipo já foi organizada para isso (ver <code>assets/js/data/official/lines.js</code>).</p>
+        <p class="fine">Quando a Prefeitura e as operadoras divulgarem linhas, itinerários, pontos e horários reais, esses dados fictícios devem ser substituídos pelos oficiais. A estrutura do protótipo já foi organizada para isso (ver <code>assets/js/data/official/lines.js</code>).</p>
       </section>
 
       <section class="card prose about-alert">
@@ -49,7 +49,7 @@ export default {
       <section class="card prose">
         <h2 class="card-title">Simulação de acompanhamento</h2>
         <p>Durante a demonstração, é possível visualizar um ônibus se deslocando pelo mapa ao longo de um itinerário fictício.</p>
-        <p>A simulação ilustra a experiência que poderia ser oferecida futuramente, caso existissem dados reais de localização dos veículos disponibilizados para integração — como prevê a Lei Municipal nº 3.152/2021.</p>
+        <p>A simulação ilustra a experiência que poderia ser oferecida futuramente, caso existissem dados reais de localização dos veículos disponibilizados para integração, como prevê a Lei Municipal nº 3.152/2021.</p>
         <p>O protótipo pode apresentar, por exemplo:</p>
         <div class="demo-example" aria-label="Exemplo ilustrativo de ônibus em circulação">
           <p class="demo-example__kicker">Ônibus em circulação</p>
@@ -72,7 +72,7 @@ export default {
       <section class="card prose">
         <h2 class="card-title">Representação cartográfica</h2>
         <p>O mapa utilizado no protótipo tem finalidade exclusivamente demonstrativa.</p>
-        <p>O corredor exibido (Terminal Centro, Saracuruna, Parada Angélica, Imbariê e Xerém) segue vias reais, calculadas sobre dados do OpenStreetMap com o serviço público OSRM — mas é um trajeto <strong>ilustrativo</strong>, escolhido para mostrar o funcionamento do app, e não uma linha real ou georreferenciada oficialmente.</p>
+        <p>O corredor exibido (Terminal Centro, Saracuruna, Parada Angélica, Imbariê e Xerém) segue vias reais, calculadas sobre dados do OpenStreetMap com o serviço público OSRM, mas é um trajeto <strong>ilustrativo</strong>, escolhido para mostrar o funcionamento do app, e não uma linha real ou georreferenciada oficialmente.</p>
         <p>A divisão distrital exibida na tela inicial (1º Duque de Caxias/Sede, 2º Campos Elíseos, 3º Imbariê e 4º Xerém) reproduz limites administrativos públicos do OpenStreetMap, simplificados para desenho.</p>
       </section>
 

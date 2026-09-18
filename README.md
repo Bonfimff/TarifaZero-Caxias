@@ -1,6 +1,6 @@
 # Tarifa Zero · Duque de Caxias
 
-Protótipo conceitual (**não oficial**) de uma plataforma de informações do **Programa Tarifa Zero** de Duque de Caxias/RJ, instituído pela Lei Municipal nº 3.589, de 10 de junho de 2026. Duque de Caxias também tem a Lei Municipal nº 3.152/2021, que prevê um aplicativo gratuito (Android/iOS) com localização dos ônibus por GPS, itinerários, tempo estimado de espera e horários — este protótipo demonstra uma possível solução tecnológica para esse aplicativo.
+Protótipo conceitual (**não oficial**) de uma plataforma de informações do **Programa Tarifa Zero** de Duque de Caxias/RJ, instituído pela Lei Municipal nº 3.589, de 10 de junho de 2026. Duque de Caxias também tem a Lei Municipal nº 3.152/2021, que prevê um aplicativo gratuito (Android/iOS) com localização dos ônibus por GPS, itinerários, tempo estimado de espera e horários. Este protótipo demonstra uma possível solução tecnológica para esse aplicativo.
 
 Esta é uma cópia estrutural e funcional do protótipo **Amarelinho – Tarifa Zero de Magé**, adaptada para Duque de Caxias. As duas versões são projetos independentes: nenhuma altera a outra.
 
@@ -22,16 +22,16 @@ Abra http://localhost:5174 (porta diferente da versão de Magé, para rodar as d
 
 ## O que é real, aproximado e fictício
 
-Diferente da versão de Magé — que reproduz a página oficial do "Amarelinho" daquela Prefeitura —, **Duque de Caxias ainda não publicou linhas, itinerários, pontos de parada ou horários** do Tarifa Zero. Por isso:
+Diferente da versão de Magé, que reproduz a página oficial do "Amarelinho" daquela Prefeitura, **Duque de Caxias ainda não publicou linhas, itinerários, pontos de parada ou horários** do Tarifa Zero. Por isso:
 
 | Tipo | Conteúdo | Onde está |
 |---|---|---|
 | **Real** | Base legal (leis municipais); locais do município (Terminal Centro, Saracuruna, Parada Angélica, Imbariê, Xerém) e a divisão em 4 distritos | `assets/js/data/official/sources.js`, `assets/js/data/geo/dc-districts.js` |
-| **Aproximado** | Traçado viário real entre esses locais (OpenStreetMap + OSRM) — um corredor **ilustrativo**, não uma linha oficial | `assets/js/data/geo/dc01-route.js` (gerado por `_fontes/geo/build_dc01.py`) |
+| **Aproximado** | Traçado viário real entre esses locais (OpenStreetMap + OSRM), um corredor **ilustrativo**, não uma linha oficial | `assets/js/data/geo/dc01-route.js` (gerado por `_fontes/geo/build_dc01.py`) |
 | **Fictício** | As linhas DC01/DC02/DC03 em si: números, sentidos e horários de saída | `assets/js/data/official/lines.js` |
 | **Simulado** | Posição dos ônibus, velocidade, atrasos, previsão dinâmica | `assets/js/data/mock/` |
 
-Quando a Prefeitura/operadoras publicarem dados reais, substitua `assets/js/data/official/lines.js` (e, se necessário, a geometria em `data/geo/`) mantendo o mesmo formato — a interface não muda.
+Quando a Prefeitura/operadoras publicarem dados reais, substitua `assets/js/data/official/lines.js` (e, se necessário, a geometria em `data/geo/`) mantendo o mesmo formato. A interface não muda.
 
 ## Arquitetura
 
@@ -58,7 +58,7 @@ assets/
     lib/                           geo, time, text, emitter
 ```
 
-A interface **não calcula** posição nem previsão: ela consome apenas os objetos devolvidos pelo provedor de dados — a mesma regra da versão de Magé.
+A interface **não calcula** posição nem previsão: ela consome apenas os objetos devolvidos pelo provedor de dados, a mesma regra da versão de Magé.
 
 ## Preparado para o futuro
 
@@ -79,7 +79,7 @@ bash server/deploy/deploy.sh     # envia os dados para /var/www/tarifa-zero-duqu
 npm run api                      # roda a API compartilhada localmente (http://127.0.0.1:5180/api/v1/caxias)
 ```
 
-Antes do primeiro `deploy.sh` desta cidade, a versão atual da API de Magé (com o serviço atualizado) precisa estar no servidor — o script confere isso e para com uma mensagem se não estiver. Os eventos de uso ficam em `/var/lib/tarifa-zero-duque-de-caxias/eventos` e são lidos por `node server/auditoria.js`.
+Antes do primeiro `deploy.sh` desta cidade, a versão atual da API de Magé (com o serviço atualizado) precisa estar no servidor. O script confere isso e para com uma mensagem se não estiver. Os eventos de uso ficam em `/var/lib/tarifa-zero-duque-de-caxias/eventos` e são lidos por `node server/auditoria.js`.
 
 ## Identidade visual
 

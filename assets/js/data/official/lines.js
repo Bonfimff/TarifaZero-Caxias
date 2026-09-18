@@ -11,7 +11,7 @@
 // equivalente em services/httpTransportProvider.js).
 const DEMO_HOURS = { start: '05:00', end: '22:00', label: 'Diariamente, das 5h às 22h (horário fictício de demonstração)' };
 
-const DEMO_NOTE = 'Linha, sentido e horários FICTÍCIOS, criados apenas para demonstrar este protótipo — não correspondem a uma linha real operada em Duque de Caxias. Os pontos e o traçado seguem locais e vias reais do município. Aguardando divulgação oficial de linhas, itinerários, pontos e horários pela Prefeitura/operadoras, conforme a Lei Municipal nº 3.589/2026.';
+const DEMO_NOTE = 'Linha, sentido e horários FICTÍCIOS, criados apenas para demonstrar este protótipo. Não correspondem a uma linha real operada em Duque de Caxias. Os pontos e o traçado seguem locais e vias reais do município. Aguardando divulgação oficial de linhas, itinerários, pontos e horários pela Prefeitura/operadoras, conforme a Lei Municipal nº 3.589/2026.';
 
 export const LINES = [
   {
@@ -73,7 +73,7 @@ export const LINES = [
     },
     sourceNotes: [
       DEMO_NOTE,
-      'Esta linha ilustra o caso em que os pontos e o itinerário estão no mapa, mas não há acompanhamento de ônibus em tempo real — o mesmo padrão usado para linhas sem quadro de horários compatível na versão de Magé.'
+      'Esta linha ilustra o caso em que os pontos e o itinerário estão no mapa, mas não há acompanhamento de ônibus em tempo real. É o mesmo padrão usado para linhas sem quadro de horários compatível na versão de Magé.'
     ]
   }
 ];

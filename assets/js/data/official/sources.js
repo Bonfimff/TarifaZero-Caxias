@@ -2,7 +2,7 @@
 // Diferente da versão de Magé, Duque de Caxias ainda não tem uma página oficial com linhas,
 // itinerários, pontos e horários do Tarifa Zero: o programa foi instituído recentemente e o
 // aplicativo previsto em lei ainda não foi lançado. Por isso as fontes abaixo são a base legal
-// do programa, não um catálogo operacional — os dados de linhas exibidos no app são DEMONSTRAÇÃO.
+// do programa, não um catálogo operacional: os dados de linhas exibidos no app são DEMONSTRAÇÃO.
 export const SOURCES = {
   tarifaZeroLaw: {
     id: 'lei-3589-2026',
